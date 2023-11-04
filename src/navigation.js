@@ -21,27 +21,16 @@ const Navigation = () => {
         <Stack.Screen
           name="Products"
           component={ProductsScreen}
-          headerRight={() => (
-            <Pressable
-              onPress={() => navigation.navigate("Cart")}
-              style={{ flexDirection: "row" }}
-            >
-              <FontAwesome5 name="shopping-cart" size={18} color="black" />
-              {/* <MaterialCommunityIcons name="cart" size={18} color="gray" /> */}
-              <Text style={{ marginLeft: 5, fontWeight: "500" }}>1</Text>
-            </Pressable>
-          )}
           options={({ navigation }) => ({
-            headerRight: () => {
+            headerRight: () => (
               <Pressable
                 onPress={() => navigation.navigate("Cart")}
                 style={{ flexDirection: "row" }}
               >
-                <FontAwesome5 name="shopping-cart" size={18} color="black" />
-                {/* <MaterialCommunityIcons name="cart" size={18} color="gray" /> */}
+                <FontAwesome5 name="shopping-cart" size={18} color="gray" />
                 <Text style={{ marginLeft: 5, fontWeight: "500" }}>1</Text>
-              </Pressable>;
-            },
+              </Pressable>
+            ),
           })}
         />
         <Stack.Screen
